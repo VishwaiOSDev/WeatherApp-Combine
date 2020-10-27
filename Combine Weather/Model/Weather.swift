@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct WeatherResponse : Decodable {
+    var main : Weather
+}
+
+struct Weather : Decodable {
+    
+    var temp : Double?
+    var humidity : Double?
+    
+    static var placeholder : Weather{
+        return Weather(temp: nil, humidity: nil)
+    }
+    
+}
+
